@@ -367,3 +367,28 @@ body {
 @media (max-width: 768px) {
   .section-pad { padding: 4rem 0; }
 }
+
+/* ===== ARTICLE CONTENT TYPOGRAPHY ===== */
+.article-content h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.article-content p {
+  margin-bottom: 1.25rem;
+}
+.article-content ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.article-content li {
+  margin-bottom: 0.5rem;
+}
+.article-content strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}

@@ -2,6 +2,7 @@
 
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { ArrowRight, BookOpen, Clock } from "lucide-react";
+import Link from "next/link";
 
 const ARTICLES = [
   {
@@ -12,6 +13,7 @@ const ARTICLES = [
       "A plain-language guide to the legal grounds for divorce in India — from cruelty and desertion to mutual consent — and what you need to know before filing a petition.",
     readTime: "6 min read",
     date: "July 2024",
+    link: "/articles/matrimonial-law",
   },
   {
     category: "Criminal Law",
@@ -21,6 +23,7 @@ const ARTICLES = [
       "Facing a potential arrest? Anticipatory bail under Section 438 CrPC can be a crucial protection. Here's a clear breakdown of the process, timelines, and legal strategy.",
     readTime: "8 min read",
     date: "June 2024",
+    link: "/articles/criminal-law",
   },
   {
     category: "NI Act / Section 138",
@@ -30,6 +33,7 @@ const ARTICLES = [
       "Has a cheque issued to you bounced? Section 138 of the Negotiable Instruments Act provides a strong criminal remedy. This guide covers the 30-day notice, complaint process, timelines, and what compensation you can claim.",
     readTime: "7 min read",
     date: "May 2024",
+    link: "/articles/ni-act",
   },
   {
     category: "Consumer Law",
@@ -39,6 +43,7 @@ const ARTICLES = [
       "Cheated by a service provider? The Consumer Protection Act, 2019 empowers you to seek redress. This guide walks you through the complaint process at the DCDRC.",
     readTime: "5 min read",
     date: "April 2024",
+    link: "/articles/consumer-law",
   },
   {
     category: "Civil Law",
@@ -48,6 +53,7 @@ const ARTICLES = [
       "From title disputes and illegal possession to builder-buyer conflicts, this article outlines the civil remedies available to property owners in Delhi courts.",
     readTime: "7 min read",
     date: "March 2024",
+    link: "/articles/civil-law",
   },
 ];
 
@@ -85,9 +91,10 @@ export default function Articles() {
           {ARTICLES.map((article, i) => {
             const isLast = i === ARTICLES.length - 1;
             return (
-              <article
+              <Link
+                href={article.link}
                 key={article.title}
-                className={`reveal reveal-delay-${(i % 4) + 1} premium-card rounded-3xl p-7 group cursor-pointer${
+                className={`reveal reveal-delay-${(i % 4) + 1} premium-card rounded-3xl p-7 group cursor-pointer block${
                   isLast ? " sm:col-span-2 sm:max-w-[calc(50%-0.75rem)] sm:mx-auto w-full" : ""
                 }`}
               >
@@ -143,7 +150,7 @@ export default function Articles() {
                     <ArrowRight size={13} />
                   </span>
                 </div>
-              </article>
+              </Link>
             );
           })}
         </div>

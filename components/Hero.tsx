@@ -2,12 +2,11 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { Phone, MessageCircle, Calendar, ChevronDown, Star, Award, Users } from "lucide-react";
+import { Phone, MessageCircle, Calendar, ChevronDown, Star, Award } from "lucide-react";
 
 // ─── Stats data ──────────────────────────────────────────────
 const STATS = [
   { icon: Award,  value: "6+",   label: "Years of Practice" },
-  { icon: Users,  value: "500+", label: "Clients Served"   },
   { icon: Star,   value: "3",    label: "Practice Areas"   },
 ];
 
